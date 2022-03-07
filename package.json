@@ -1,0 +1,12 @@
+{
+  "name": "bsale-test-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luis Andrade <fersorc12@gmail.com>",
+  "license": "MIT"
+}
