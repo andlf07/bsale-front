@@ -2,7 +2,6 @@ import { config } from "../../config.js";
 import { cleanSection } from "../CleanProductsList.js";
 import { renderProducts } from "../components/products/RenderProducts.js";
 import { getData } from "../getData.js";
-import { onView } from "./Onview.js";
 import { spinner } from "./spinner.js";
 
 const { URL, URL_ATTRIBUTES, URL_PRODUCTS } = config;
@@ -17,7 +16,6 @@ class AttributesSearch {
       return alert("Por favor ingresar un dato valido/algo ocurrio mal!");
     }
     cleanSection.clean();
-    onView.view();
     spinner("flex");
     products.forEach((product) => {
       renderProducts.createProduct(product);

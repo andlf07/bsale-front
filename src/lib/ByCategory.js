@@ -5,7 +5,6 @@ import { getData } from "../getData.js";
 import { spinner } from "./spinner.js";
 
 const { URL, URL_PRODUCTS } = config;
-
 class ByCategory {
   async productByCategory(e) {
     e.preventDefault();

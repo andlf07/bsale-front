@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", mainLoad.domLoaded);
 const category = document.querySelector("#category-container");
 category.addEventListener("click", byCategory.productByCategory);
 
+const categoryMenu = document.querySelector(".category-container-list");
+categoryMenu.addEventListener("click", byCategory.productByCategory);
+
 //Search by name
 const nameInput = document.querySelector(".search-by-name");
 nameInput.addEventListener("keypress", async (e) => {
@@ -35,6 +38,28 @@ discountInput.addEventListener("keypress", async (e) => {
   //Checking when the user use Enter keyCode = 13
   if (e.keyCode === 13) {
     spinner("flex");
+    attributesSearch.search("discount", e.target.value);
+  }
+});
+
+//search by price at Menu
+const priceInputMenu = document.querySelector(".search-by-price-menu");
+priceInputMenu.addEventListener("keypress", async (e) => {
+  //Checking when the user use Enter keyCode = 13
+  if (e.keyCode === 13) {
+    spinner("flex");
+    onView.view();
+    attributesSearch.search("price", e.target.value);
+  }
+});
+
+//search by discount at Menu
+const discountInputMenu = document.querySelector(".search-by-discount-menu");
+discountInputMenu.addEventListener("keypress", async (e) => {
+  //Checking when the user use Enter keyCode = 13
+  if (e.keyCode === 13) {
+    spinner("flex");
+    onView.view();
     attributesSearch.search("discount", e.target.value);
   }
 });
