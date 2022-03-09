@@ -3,8 +3,12 @@
 This frontend was developed with Vanilla Javascript, withouth libraries.
 You can download and deploy it.
 
-In the file `config.js` is the endpoints we will use to get de data.
+In this case we can made diferents search like: name, category, price and discount.
+If the products has a discount we rendered the discount and will have a box with color red.
+
 I use the the API developed for the test following the README.md from the backend API, to get de data. [BackendAPI](https://github.com/andlf07/bsale-test).
+
+In the file `config.js` is the endpoints we will use to get de data.
 
     Add some responsive viewport at 667px and 780px.
     Add burger menu when is at 667px
