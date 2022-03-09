@@ -18,7 +18,7 @@ class RenderProducts {
                <span class="product-price">$${data.price}</span>
                <span class="${
                  data.discount === 0 ? "discount-container" : "discount"
-               }" id="discount">Discount: ${data.discount}%</span>
+               }" id="discount"> -${data.discount} %</span>
                <span class="product-cart gg-shopping-cart"></span>
             </div>
       `;
@@ -27,4 +27,4 @@ class RenderProducts {
   }
 }
 
-export const render = new RenderProducts();
+export const renderProducts = new RenderProducts();

@@ -4,7 +4,22 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Basic css -->
    <link rel="stylesheet" href="./src/css/style.css">
+   <!-- CSS for products Card -->
+   <link rel="stylesheet" href="./src/components/products/products.css">
+   <!-- Load Spinner -->
+   <link rel="stylesheet" href="./src/css/spinner.css">
+   <!-- Left contianer -->
+   <link rel="stylesheet" href="./src/css/left-container.css">
+   <!-- CSS for the category-list -->
+   <link rel="stylesheet" href="./src/components/category/category-list.css">
+   <!-- DIscount price input css -->
+   <link rel="stylesheet" href="./src/components/discount-price-input/style.css">
+   <!-- Display -->
+   <link rel="stylesheet" href="./src/css/display.css">
+   <!-- Burger Menu -->
+   <link rel="stylesheet" href="./src/css/menu.css">
    <!-- css.gg -->
    <link href='https://css.gg/css' rel='stylesheet'>
    <!-- UNPKG -->
@@ -15,13 +30,49 @@
 </head>
 <body>
    <header>
-      <span>Bsale Store Test</span>
+      <span class="gg-menu"></span>
+      <span class="shop-name">Bsale Store Test</span>
       <div class="input-container search">
-         <input type="searh" class="search" placeholder="Buscar por: categoria, nombre, precio o descuento" id="input-search">
+         <input type="searh" class="search-by-name" placeholder="Buscar por: nombre" id="input-search">
       </div>
+      <section class="menu-container" id="menu-container">
+         <span class="gg-close-o"></span>
+         <section id="category-container-menu" class="category-container-list">
+            <span><h3>Categorias</h3></span>
+         </section>
+         <section class="price-discount-container price-discount-menu">
+            <div>
+               Precio
+               <input type="search", class="search search-by-price" name="Precio" placeholder="Precio" id="price-input">
+            </div>
+            <div>
+               Descuento
+               <input type="search" class="search search-by-discount" name="Discount" placeholder="Descuento" id="discount-input">
+            </div>
+         </section>
+      </section>
    </header>
    <main id="app">
-      <section id="products-container"></section>
+      <section class="spinner-container">
+         <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </section>
+      <section id="products-container">
+      </section>
+      <section class="left-container">
+         <section id="category-container" class="category-container-list">
+            <span><h3>Categorias</h3></span>
+         </section>
+         <section class="price-discount-container">
+            <div>
+               Precio
+               <input type="search", class="search search-by-price" name="Precio" placeholder="Precio" id="price-input">
+            </div>
+            <div>
+               Descuento
+               <input type="search" class="search search-by-discount" name="Discount" placeholder="Descuento" id="discount-input">
+            </div>
+         </section>
+      </section>
    </main>
 </body>
 <script type="module" src="./app.js"></script>

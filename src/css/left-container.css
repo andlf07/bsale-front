@@ -1,0 +1,5 @@
+.left-container {
+  display: grid;
+  grid-auto-rows: 30vh 30vh;
+  justify-items: center;
+}

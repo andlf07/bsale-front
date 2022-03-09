@@ -1,12 +1,48 @@
-import { getData } from "./src/getData.js";
-import { render } from "./src/renderProducts.js";
+import { spinner } from "./src/lib/spinner.js";
+import { attributesSearch } from "./src/lib/AttributesSearch.js";
+import { mainLoad } from "./src/lib/MainLoad.js";
+import { byCategory } from "./src/lib/ByCategory.js";
+import { onView } from "./src/lib/Onview.js";
 
-const URL_PRODUCTS = "https://bsale-backendapp.herokuapp.com/api/products";
+//When visit the website and the DOM is loaded we call the API
+document.addEventListener("DOMContentLoaded", mainLoad.domLoaded);
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const data = await getData.dataAPI(URL_PRODUCTS);
-  const { products } = data;
-  products.forEach((element) => {
-    render.createProduct(element);
-  });
+//Onclick one category we load all the products with this category
+const category = document.querySelector("#category-container");
+category.addEventListener("click", byCategory.productByCategory);
+
+//Search by name
+const nameInput = document.querySelector(".search-by-name");
+nameInput.addEventListener("keypress", async (e) => {
+  //Checking when the user use Enter keyCode = 13
+  if (e.keyCode === 13) {
+    attributesSearch.search("name", e.target.value);
+  }
 });
+//search by price
+const priceInput = document.querySelector(".search-by-price");
+priceInput.addEventListener("keypress", async (e) => {
+  //Checking when the user use Enter keyCode = 13
+  if (e.keyCode === 13) {
+    spinner("flex");
+    attributesSearch.search("price", e.target.value);
+  }
+});
+
+//search by discount
+const discountInput = document.querySelector(".search-by-discount");
+discountInput.addEventListener("keypress", async (e) => {
+  //Checking when the user use Enter keyCode = 13
+  if (e.keyCode === 13) {
+    spinner("flex");
+    attributesSearch.search("discount", e.target.value);
+  }
+});
+
+//Burger menu open
+const burgerMenu = document.querySelector(".gg-menu");
+burgerMenu.addEventListener("click", onView.view);
+
+//close menu
+const closeMenu = document.querySelector(".gg-close-o");
+closeMenu.addEventListener("click", onView.view);
