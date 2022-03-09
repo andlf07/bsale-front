@@ -1,3 +1,4 @@
+//If the menu is onview remove onview class and hide
 class OnView {
   view() {
     const menuContainer = document.querySelector(".menu-container");

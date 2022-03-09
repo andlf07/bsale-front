@@ -5,6 +5,8 @@ import { getData } from "../getData.js";
 import { spinner } from "./spinner.js";
 
 const { URL, URL_PRODUCTS } = config;
+
+//search by category as the searchbyattributes we have to clean the procuts container to add the news products
 class ByCategory {
   async productByCategory(e) {
     e.preventDefault();

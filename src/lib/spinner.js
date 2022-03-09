@@ -1,3 +1,4 @@
+//spinner when is loading data
 export const spinner = (display) => {
   const spinnerContainer = document.querySelector(".spinner-container");
   if (spinnerContainer.style.display == "flex") {

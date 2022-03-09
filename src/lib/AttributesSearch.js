@@ -6,6 +6,7 @@ import { spinner } from "./spinner.js";
 
 const { URL, URL_ATTRIBUTES, URL_PRODUCTS } = config;
 
+//We search products by attributes, clean the products container and create news
 class AttributesSearch {
   async search(attribute, value) {
     const getProducts = await getData.dataAPI(
